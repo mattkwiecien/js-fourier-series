@@ -12,8 +12,8 @@ namespace FourierSeries.Controllers {
 			return View();
 		}
 
-		public IActionResult Sine() {
-			return View();
+		public IActionResult WaveEq() {
+			return View("WaveEquation");
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

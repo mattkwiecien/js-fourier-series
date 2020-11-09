@@ -1,0 +1,24 @@
+﻿<div ng-controller="waveEqController">
+
+	<label style="margin-top:10px;">
+		<input type="radio" ng-model="formulaType" />
+		\( f(x) =
+		\begin{cases}
+		A, & \text{if $-L < x < 0$} \\
+		-A, & \text{if $0 < x < L$}
+		\end{cases} \)
+	</label>
+	<div style="display:flex;flex:1;">
+		<div style="display:flex;flex-direction:column;">
+			<label>Amplitude: <input ng-model="amplitude" type="number" /></label>
+			<label>Length: <input ng-model="length" type="number" /></label>
+			<label>Terms: <input ng-model="terms" type="number" /></label>
+			<label><input ng-model="showIndividual" type="checkbox" /> Show individual terms</label>
+			<label><input ng-model="showBestApprox" type="checkbox" /> Only show the final approx</label>
+			<button style="max-width:50px;" type="button" class="btn btn-primary" ng-click="plot2()">Run</button>
+		</div>
+		<div id="canvas" style="flex:1;height:600px;"></div>
+	</div>
+
+
+</div>
